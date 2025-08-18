@@ -230,7 +230,7 @@ export default function DdayCalculatorContent() {
 
             <button
               onClick={() => calculateDday()}
-              className="h-10 px-6 bg-[#EB5A0F] text-white border-2 border-[#D14A00] hover:bg-[#D14A00] transition-colors font-bold"
+              className="h-10 px-6 bg-[#EB5A0F] text-white border-2 border-[#D14A00] hover:bg-[#D14A00] active:bg-[#C13F00] transition-colors duration-200 font-bold"
             >
               계산하기
             </button>
@@ -282,10 +282,24 @@ export default function DdayCalculatorContent() {
                   {(() => {
                     const timeFormat = formatTime(result.totalSeconds)
                     return result.isPast
-                      ? `총 ${timeFormat.hours}시간 ${timeFormat.minutes}분 ${timeFormat.seconds}초 지났습니다.`
-                      : `총 ${timeFormat.hours}시간 ${timeFormat.minutes}분 ${timeFormat.seconds}초 남았습니다.`
+                      ? `총 ${timeFormat.hours}시간 ${timeFormat.minutes}분 지났습니다.`
+                      : `총 ${timeFormat.hours}시간 ${timeFormat.minutes}분 남았습니다.`
                   })()}
                 </div>
+              </div>
+
+              {/* Reset Button */}
+              <div className="text-center mt-4">
+                <button
+                  onClick={() => {
+                    setInputs({ year: "", month: "", day: "" })
+                    setResult(null)
+                    setError("")
+                  }}
+                  className="px-4 py-2 bg-[#F5F5F5] text-[#666666] border border-[#CCCCCC] hover:bg-[#E8E8E8] transition-colors duration-200 text-sm font-medium rounded"
+                >
+                  다시 계산하기
+                </button>
               </div>
             </div>
           </div>
