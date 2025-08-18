@@ -177,7 +177,7 @@ export default function DdayCalculatorContent() {
     <div className="min-h-screen bg-[#F5F5F5] py-4 px-4">
       <div className="max-w-2xl mx-auto space-y-4">
         <div className="bg-[#EB5A0F] text-white p-4 border-2 border-[#D14A00] text-center">
-          <h1 className="text-lg font-bold">날짜 입력하여 디데이 계산하기</h1>
+          <h1 className="text-lg font-bold">날짜 입력하여 디데이 dday 계산하기</h1>
         </div>
 
         <div className="bg-[#E8E8E8] border-2 border-[#CCCCCC] p-4">
