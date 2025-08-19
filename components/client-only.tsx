@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, ReactNode } from 'react'
+import { useState, useLayoutEffect, ReactNode } from 'react'
 
 interface ClientOnlyProps {
   children: ReactNode
@@ -10,7 +10,7 @@ interface ClientOnlyProps {
 export default function ClientOnly({ children, fallback = null }: ClientOnlyProps) {
   const [hasMounted, setHasMounted] = useState(false)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setHasMounted(true)
   }, [])
 
