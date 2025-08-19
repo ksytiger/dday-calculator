@@ -1,5 +1,9 @@
 import DaysCalculatorContent from "@/components/days-calculator-content"
 
-export default function Home() {
+export const dynamic = "force-static"
+
+export default function DaysPage() {
   return <DaysCalculatorContent />
 }
+
+

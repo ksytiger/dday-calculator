@@ -9,6 +9,11 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async rewrites() {
+    return [
+      { source: '/디데이계산기', destination: '/dday' },
+    ]
+  },
 }
 
 export default nextConfig
