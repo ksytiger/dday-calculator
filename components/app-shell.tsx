@@ -1,7 +1,6 @@
 "use client"
 
 import * as React from "react"
-import Link from "next/link"
 import { usePathname } from "next/navigation"
 
 import {
@@ -35,12 +34,12 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild isActive={isDaysActive}>
-                  <Link href="/">날짜 계산기</Link>
+                  <a href="/">날짜 계산기</a>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild isActive={isDdayActive}>
-                  <Link href="/디데이계산기">디데이 계산기</Link>
+                  <a href="/디데이계산기">디데이 계산기</a>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>

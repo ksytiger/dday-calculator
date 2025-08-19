@@ -13,7 +13,7 @@ export function middleware(request: NextRequest) {
   if (decodedPath === '/dday' || decodedPath === '/dday/') {
     const url = request.nextUrl.clone()
     url.pathname = '/디데이계산기'
-    return NextResponse.redirect(url)
+    return NextResponse.redirect(url, 308)
   }
   return NextResponse.next()
 }

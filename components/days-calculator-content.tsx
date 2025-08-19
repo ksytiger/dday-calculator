@@ -109,7 +109,7 @@ const YMDInputs: React.FC<{
   </div>
 )
 
-export default function DaysCalculatorContent() {
+export default function DaysCalculatorContent({ pageTitle }: { pageTitle?: string } = {}) {
   // Section 1: between two dates
   const [start1, setStart1] = useState<YMD>({ year: "2025", month: "8", day: "19" })
   const [end1, setEnd1] = useState<YMD>({ year: "2025", month: "8", day: "19" })
@@ -176,7 +176,7 @@ export default function DaysCalculatorContent() {
     <div className="min-h-screen bg-[#F5F5F5] py-4 px-4">
       <div className="max-w-xl mx-auto space-y-5">
         <div className="w-full bg-[#EB5A0F] text-white border-2 border-[#D14A00] text-center py-3">
-          <h1 className="text-lg font-extrabold">날짜 계산기</h1>
+          <h1 className="text-lg font-extrabold">{pageTitle ?? "날짜 계산기"}</h1>
         </div>
         {/* Section 1: Between two dates */}
         <SectionCard heading="일수 계산기" title="특정한 날짜로부터 특정한 날짜까지의 일수를 계산합니다.">
