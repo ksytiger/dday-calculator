@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import "./globals.css"
+import AppShell from "@/components/app-shell"
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dday-calculator.example.com"
 
@@ -91,7 +92,9 @@ export default function RootLayout({
   return (
     <html lang="ko" suppressHydrationWarning>
       <head />
-      <body suppressHydrationWarning className={GeistSans.className}>{children}</body>
+      <body suppressHydrationWarning className={GeistSans.className}>
+        <AppShell>{children}</AppShell>
+      </body>
     </html>
   )
 }
