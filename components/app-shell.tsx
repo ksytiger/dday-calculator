@@ -22,6 +22,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
 
   const isDaysActive = pathname === "/" || pathname.startsWith("/days")
   const isDdayActive = pathname === "/디데이계산기" || pathname.startsWith("/dday")
+  const isDaysDiffActive = pathname === "/일수계산기"
 
   return (
     <SidebarProvider>
@@ -40,6 +41,11 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
               <SidebarMenuItem>
                 <SidebarMenuButton asChild isActive={isDdayActive}>
                   <a href="/디데이계산기">디데이 계산기</a>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild isActive={isDaysDiffActive}>
+                  <a href="/일수계산기">일수 계산기</a>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
