@@ -5,7 +5,7 @@ import { GeistMono } from "geist/font/mono"
 import "./globals.css"
 import AppShell from "@/components/app-shell"
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dday-calculator.example.com"
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://날짜계산기.kr"
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

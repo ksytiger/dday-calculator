@@ -189,7 +189,6 @@ export default function DdayCalculatorContent({ pageTitle }: { pageTitle?: strin
                 type="text"
                 inputMode="numeric"
                 pattern="\d*"
-                placeholder="2025"
                 value={inputs.year}
                 onChange={(e) => handleInputChange("year", e.target.value)}
                 onKeyPress={handleKeyPress}
@@ -204,7 +203,6 @@ export default function DdayCalculatorContent({ pageTitle }: { pageTitle?: strin
                 type="text"
                 inputMode="numeric"
                 pattern="\d*"
-                placeholder="8"
                 value={inputs.month}
                 onChange={(e) => handleInputChange("month", e.target.value)}
                 onKeyPress={handleKeyPress}
@@ -219,7 +217,6 @@ export default function DdayCalculatorContent({ pageTitle }: { pageTitle?: strin
                 type="text"
                 inputMode="numeric"
                 pattern="\d*"
-                placeholder="15"
                 value={inputs.day}
                 onChange={(e) => handleInputChange("day", e.target.value)}
                 onKeyPress={handleKeyPress}
@@ -237,9 +234,11 @@ export default function DdayCalculatorContent({ pageTitle }: { pageTitle?: strin
           </div>
 
           <div className="space-y-1 text-sm text-[#0066CC] mt-4">
+            <p className="text-[#EB5A0F] font-bold">오늘은 {getCurrentKSTString()}입니다.</p>
+            <p>날짜는 오늘 기준으로 계산됩니다.</p>
             <p>날짜를 입력하면 그 날짜를 기준으로 얼마나 지났는지, 남았는지 계산합니다.</p>
             <p>개월, 시간까지 계산되어 나옵니다.</p>
-            <p className="text-[#EB5A0F] font-bold">오늘은 {getCurrentKSTString()}입니다.</p>
+            
           </div>
         </div>
 

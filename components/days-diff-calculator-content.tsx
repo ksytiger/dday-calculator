@@ -64,7 +64,6 @@ const YMDInputs: React.FC<{
         className="h-10 w-24 border-2 border-[#999999] bg-white focus:border-[#EB5A0F] outline-none px-2 text-base text-center"
         inputMode="numeric"
         pattern="\\d*"
-        placeholder="2025"
         value={value.year}
         onChange={(e) => onChange({ ...value, year: e.target.value })}
       />
@@ -75,7 +74,6 @@ const YMDInputs: React.FC<{
         className="h-10 w-16 border-2 border-[#999999] bg-white focus:border-[#EB5A0F] outline-none px-2 text-base text-center"
         inputMode="numeric"
         pattern="\\d*"
-        placeholder="8"
         value={value.month}
         onChange={(e) => onChange({ ...value, month: e.target.value })}
       />
@@ -86,7 +84,6 @@ const YMDInputs: React.FC<{
         className="h-10 w-16 border-2 border-[#999999] bg-white focus:border-[#EB5A0F] outline-none px-2 text-base text-center"
         inputMode="numeric"
         pattern="\\d*"
-        placeholder="19"
         value={value.day}
         onChange={(e) => onChange({ ...value, day: e.target.value })}
       />
@@ -96,8 +93,8 @@ const YMDInputs: React.FC<{
 )
 
 export default function DaysDiffCalculatorContent({ pageTitle }: { pageTitle?: string } = {}) {
-  const [start, setStart] = useState<YMD>({ year: "2025", month: "8", day: "19" })
-  const [end, setEnd] = useState<YMD>({ year: "2025", month: "8", day: "19" })
+  const [start, setStart] = useState<YMD>({ year: "", month: "", day: "" })
+  const [end, setEnd] = useState<YMD>({ year: "", month: "", day: "" })
   const [includeStart, setIncludeStart] = useState<boolean>(true)
   const [result, setResult] = useState<
     | { ok: true; days: number }

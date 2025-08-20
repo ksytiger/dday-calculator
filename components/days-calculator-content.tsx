@@ -78,7 +78,6 @@ const YMDInputs: React.FC<{
         className="h-10 w-24 border-2 border-[#999999] bg-white focus:border-[#EB5A0F] outline-none px-2 text-base text-center"
         inputMode="numeric"
         pattern="\\d*"
-        placeholder="2025"
         value={value.year}
         onChange={(e) => onChange({ ...value, year: e.target.value })}
       />
@@ -89,7 +88,6 @@ const YMDInputs: React.FC<{
         className="h-10 w-16 border-2 border-[#999999] bg-white focus:border-[#EB5A0F] outline-none px-2 text-base text-center"
         inputMode="numeric"
         pattern="\\d*"
-        placeholder="8"
         value={value.month}
         onChange={(e) => onChange({ ...value, month: e.target.value })}
       />
@@ -100,7 +98,6 @@ const YMDInputs: React.FC<{
         className="h-10 w-16 border-2 border-[#999999] bg-white focus:border-[#EB5A0F] outline-none px-2 text-base text-center"
         inputMode="numeric"
         pattern="\\d*"
-        placeholder="19"
         value={value.day}
         onChange={(e) => onChange({ ...value, day: e.target.value })}
       />
@@ -111,8 +108,8 @@ const YMDInputs: React.FC<{
 
 export default function DaysCalculatorContent({ pageTitle }: { pageTitle?: string } = {}) {
   // Section 1: between two dates
-  const [start1, setStart1] = useState<YMD>({ year: "2025", month: "8", day: "19" })
-  const [end1, setEnd1] = useState<YMD>({ year: "2025", month: "8", day: "19" })
+  const [start1, setStart1] = useState<YMD>({ year: "", month: "", day: "" })
+  const [end1, setEnd1] = useState<YMD>({ year: "", month: "", day: "" })
   const [includeStart1, setIncludeStart1] = useState<boolean>(true)
   const [betweenResult, setBetweenResult] = useState<
     | { ok: true; days: number }
@@ -129,8 +126,8 @@ export default function DaysCalculatorContent({ pageTitle }: { pageTitle?: strin
   }
 
   // Section 2: N days after
-  const [start2, setStart2] = useState<YMD>({ year: "2025", month: "8", day: "19" })
-  const [afterDays, setAfterDays] = useState<string>("0")
+  const [start2, setStart2] = useState<YMD>({ year: "", month: "", day: "" })
+  const [afterDays, setAfterDays] = useState<string>("")
   const [includeStart2, setIncludeStart2] = useState<boolean>(true)
   const [afterResult, setAfterResult] = useState<
     | { ok: true; date: Date }
@@ -149,8 +146,8 @@ export default function DaysCalculatorContent({ pageTitle }: { pageTitle?: strin
   }
 
   // Section 3: N days before
-  const [start3, setStart3] = useState<YMD>({ year: "2025", month: "8", day: "19" })
-  const [beforeDays, setBeforeDays] = useState<string>("0")
+  const [start3, setStart3] = useState<YMD>({ year: "", month: "", day: "" })
+  const [beforeDays, setBeforeDays] = useState<string>("")
   const [includeStart3, setIncludeStart3] = useState<boolean>(true)
   const [beforeResult, setBeforeResult] = useState<
     | { ok: true; date: Date }
@@ -251,7 +248,6 @@ export default function DaysCalculatorContent({ pageTitle }: { pageTitle?: strin
                 className="h-10 w-20 border-2 border-[#999999] bg-white focus:border-[#EB5A0F] outline-none px-2 text-base text-center"
                 inputMode="numeric"
                 pattern="\\d*"
-                placeholder="0"
                 value={afterDays}
                 onChange={(e) => setAfterDays(e.target.value)}
               />
@@ -315,7 +311,6 @@ export default function DaysCalculatorContent({ pageTitle }: { pageTitle?: strin
                 className="h-10 w-20 border-2 border-[#999999] bg-white focus:border-[#EB5A0F] outline-none px-2 text-base text-center"
                 inputMode="numeric"
                 pattern="\\d*"
-                placeholder="0"
                 value={beforeDays}
                 onChange={(e) => setBeforeDays(e.target.value)}
               />
