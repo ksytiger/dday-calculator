@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "날짜 계산기 - 두 날짜 사이 경과/남은 일수 계산",
   description: "시작일과 종료일을 입력해 두 날짜 사이의 경과/남은 일수를 정확히 계산하세요.",
   alternates: { canonical: "/" },
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
 }
 
 export default function DaysPage() {
