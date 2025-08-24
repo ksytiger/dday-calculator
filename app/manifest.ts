@@ -11,14 +11,26 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: "#EB5A0F",
     icons: [
       {
-        src: "/날짜계산기-파비콘.png",
+        src: "/icon-192.png",
         sizes: "192x192",
         type: "image/png",
       },
       {
-        src: "/날짜계산기-파비콘.png",
+        src: "/icon-512.png",
         sizes: "512x512",
         type: "image/png",
+      },
+      {
+        src: "/apple-touch-icon.png",
+        sizes: "180x180",
+        type: "image/png",
+        purpose: "any",
+      },
+      {
+        src: "/maskable-icon-512.png",
+        sizes: "512x512",
+        type: "image/png",
+        purpose: "maskable",
       },
     ],
   }

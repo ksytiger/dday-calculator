@@ -11,9 +11,19 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   manifest: "/manifest.webmanifest",
   icons: {
-    icon: [{ url: "/날짜계산기-파비콘.png", type: "image/png" }],
-    apple: [{ url: "/날짜계산기-파비콘.png" }],
-    shortcut: [{ url: "/날짜계산기-파비콘.png", type: "image/png" }],
+    // Prefer ASCII paths; middleware rewrites them to the Korean asset for now
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-48x48.png", type: "image/png", sizes: "48x48" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180" },
+    ],
+    shortcut: [
+      { url: "/favicon.png", type: "image/png" },
+    ],
   },
 }
 
